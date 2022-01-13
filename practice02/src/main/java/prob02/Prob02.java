@@ -9,12 +9,19 @@ public class Prob02 {
 
 		int[] intArray = new int[ 5 ];
 		double sum = 0;
-
-		/* 키보드에서 배열 크기만큼 입력 받아 배열에 저장하는 코드 */
+		int len = intArray.length;
 		
-		/* 배열에 저장된 정수 값 더하기 */
+		System.out.printf("%d개의 숫자를 입력하세요.\n", len);
+		for(int i = 0; i < len; i++) {
+			intArray[i] = scanner.nextInt();
+		}
 		
-		/* 출력 */
+		for(int i = 0; i < len; i++) {
+			sum += intArray[i];
+		}
+		
+		System.out.printf("평균은 %.1f 입니다.", sum / len);
+		
 		
 		/* 자원정리 */
 		scanner.close();
